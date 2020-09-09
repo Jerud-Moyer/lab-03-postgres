@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS motorcycles;
 DROP TABLE IF EXISTS skeletons;
+DROP TABLE IF EXISTS guitars;
 
 CREATE TABLE motorcycles (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -13,4 +14,11 @@ CREATE TABLE skeletons (
     name TEXT NOT NULL,
     type TEXT NOT NULL,
     limbs INT CHECK (limbs > 0)
+);
+
+CREATE TABLE guitars (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    type TEXT NOT NULL,
+    strings INT CHECK (strings > 0)  
 );

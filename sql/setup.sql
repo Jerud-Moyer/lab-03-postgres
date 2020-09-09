@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS motorcycles;
 DROP TABLE IF EXISTS skeletons;
 DROP TABLE IF EXISTS guitars;
 DROP TABLE IF EXISTS farts;
+DROP TABLE IF EXISTS tools; 
 
 CREATE TABLE motorcycles (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -29,4 +30,11 @@ CREATE TABLE farts (
     name TEXT NOT NULL,
     type TEXT NOT NULL,
     stankiness INT CHECK (stankiness > 0)
+);
+
+CREATE TABLE tools (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT NOT NULL,
+    type TEXT NOT NULL,
+    weight INT CHECK (weight > 0)
 );
